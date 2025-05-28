@@ -16,8 +16,7 @@ const sendEmail = async (req, res) => {
 
     const mailOptions = {
       from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-      // to: process.env.EMAIL_RECEIVER,
-      to: process.env.name,
+      to: process.env.EMAIL_RECEIVER,
       subject: 'New Contact Message from Portfolio',
       text: `Name: ${name}\nContact: ${contact}\nComment: ${comment}`,
     };
