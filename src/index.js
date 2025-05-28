@@ -1,10 +1,8 @@
 import dotenv from 'dotenv';
 dotenv.config();
-
-const express = require('express');
-const cors = require('cors');
-const contactRoutes = require('./routes/contact');
-require('dotenv').config();
+import express from 'express';
+import cors from 'cors';
+import contactRoutes from './routes/contact.js';
 
 const app = express();
 app.use(cors());
