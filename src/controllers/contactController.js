@@ -16,7 +16,8 @@ const sendEmail = async (req, res) => {
 
     const mailOptions = {
       from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_RECEIVER,
+      // to: process.env.EMAIL_RECEIVER,
+      to: process.env.name,
       subject: 'New Contact Message from Portfolio',
       text: `Name: ${name}\nContact: ${contact}\nComment: ${comment}`,
     };
@@ -29,5 +30,7 @@ const sendEmail = async (req, res) => {
     res.status(500).json({ message: 'Failed to send email.' });
   }
 };
+
+console.log(sendEmail);
 
 export default sendEmail;
